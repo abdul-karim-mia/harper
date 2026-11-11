@@ -64,5 +64,7 @@ jobs:
         run: cargo binstall cargo-hack --force --no-confirm
       - name: Install `tauri-cli`
         run: cargo binstall tauri-cli --force --no-confirm
+      - name: Show runner CPU count
+        run: nproc
       - name: Run `${{ matrix.task }}`
         run: just ${{ matrix.task }}
