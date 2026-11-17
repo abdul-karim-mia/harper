@@ -1,0 +1,21 @@
+# `polls` is often mistakenly used instead of `poles`.
+expr modifier [magnetic, totem, telephone, utility, flag, fishing, ski, barge, opposite]
+expr main [<(@modifier polls), polls>, <(polls apart), polls>]
+
+let message "Did you mean `poles`? `Poles` refers to rods, posts, or magnetic ends; `polls` refers to voting or surveys."
+let description "Looks for mixing up the plural noun `poles` with `polls`."
+let kind "WordChoice"
+let becomes "poles"
+
+test "High winds knocked down several telephone polls." "High winds knocked down several telephone poles."
+test "The crews replaced damaged utility polls along the route." "The crews replaced damaged utility poles along the route."
+test "She packed her ski polls before heading to the mountain." "She packed her ski poles before heading to the mountain."
+test "He bought new fishing polls for the trip." "He bought new fishing poles for the trip."
+test "In politics, the two candidates are polls apart." "In politics, the two candidates are poles apart."
+test "Magnets have opposite polls that attract." "Magnets have opposite poles that attract."
+test "The ancient totem polls were carefully preserved." "The ancient totem poles were carefully preserved."
+
+allows "The opinion polls opened early this morning."
+allows "The latest polls indicate strong public support."
+allows "Voters flocked to the polls across the state."
+allows "Exit polls suggest a record turnout."

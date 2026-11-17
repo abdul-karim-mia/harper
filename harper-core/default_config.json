@@ -6820,6 +6820,13 @@
 						},
 						{
 							"Bool": {
+								"name": "PolePoll",
+								"state": true,
+								"label": "Pole / Poll"
+							}
+						},
+						{
+							"Bool": {
 								"name": "RogueRouge",
 								"state": true,
 								"label": "Rogue / Rouge"

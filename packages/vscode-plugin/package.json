@@ -4164,6 +4164,12 @@
 					"default": true,
 					"description": "A collection of linters that can be run as one."
 				},
+				"harper.linters.PolePoll": {
+					"scope": "resource",
+					"type": "boolean",
+					"default": true,
+					"description": "A collection of linters that can be run as one."
+				},
 				"harper.linters.PassersBy": {
 					"scope": "resource",
 					"type": "boolean",

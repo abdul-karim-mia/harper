@@ -1,0 +1,24 @@
+# `pole` (a post or rod) is often mistakenly used instead of `poll` (a survey or voting).
+expr modifier [exit, opinion, public, recent, latest, national, presidential, straw, online, statewide]
+expr verb [conduct, conducts, conducted, conducting, organize, organizes, organized, organizing, take, takes, took, taking]
+expr main [<(@modifier pole), pole>, <(@verb [a, an, the] pole), pole>, <([run, runs, running, ran] [a, an, the] pole), pole>]
+
+let message "Did you mean `poll`? A `poll` is a survey or vote; a `pole` is a long rod or post."
+let description "Looks for mixing up the noun `poll` with `pole`."
+let kind "WordChoice"
+let becomes "poll"
+
+test "An opinion pole was conducted before the election." "An opinion poll was conducted before the election."
+test "The exit pole showed a close race." "The exit poll showed a close race."
+test "We should conduct a pole to gauge user feedback." "We should conduct a poll to gauge user feedback."
+test "The newspaper took a pole of local residents." "The newspaper took a poll of local residents."
+test "A recent pole revealed shifting voter preferences." "A recent poll revealed shifting voter preferences."
+test "The latest pole has the incumbent ahead." "The latest poll has the incumbent ahead."
+test "They organized a straw pole at the conference." "They organized a straw poll at the conference."
+test "A national pole indicates widespread support." "A national poll indicates widespread support."
+test "Participate in our online pole." "Participate in our online poll."
+
+allows "He leaned against the telephone pole."
+allows "The flag was raised to the top of the pole."
+allows "We reached the North Pole after three weeks."
+allows "The pole vault competition starts tomorrow."

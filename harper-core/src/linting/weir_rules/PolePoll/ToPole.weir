@@ -1,0 +1,25 @@
+# `poll` is often mistakenly used instead of `pole`.
+expr modifier [north, south, magnetic, totem, telephone, utility, flag, fishing, ski, barge, greased]
+expr main [<(@modifier poll), poll>, <(poll vault), poll>, <(poll vaulter), poll>, <(poll vaulters), poll>, <(poll vaulting), poll>, <(poll position), poll>]
+
+let message "Did you mean `pole`? A `pole` is a long rod, post, or geographic point; a `poll` is a survey or vote."
+let description "Looks for mixing up the noun `pole` with `poll`."
+let kind "WordChoice"
+let becomes "pole"
+
+test "They journeyed all the way to the North Poll." "They journeyed all the way to the North Pole."
+test "The South Poll is located in Antarctica." "The South Pole is located in Antarctica."
+test "The car crashed into a telephone poll." "The car crashed into a telephone pole."
+test "A utility poll was damaged during the storm." "A utility pole was damaged during the storm."
+test "The village has a carved totem poll." "The village has a carved totem pole."
+test "He bought a brand new fishing poll." "He bought a brand new fishing pole."
+test "She qualified for the poll vault." "She qualified for the pole vault."
+test "The poll vaulter cleared the bar easily." "The pole vaulter cleared the bar easily."
+test "The driver took poll position." "The driver took pole position."
+test "The flag hung from the flag poll." "The flag hung from the flag pole."
+test "The boat was pushed with a barge poll." "The boat was pushed with a barge pole."
+
+allows "The opinion poll was published yesterday."
+allows "We conducted an exit poll after voting."
+allows "He decided to poll the audience."
+allows "The latest poll shows broad approval."

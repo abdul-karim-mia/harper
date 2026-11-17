@@ -1,0 +1,25 @@
+# `poles` is often mistakenly used instead of `polls`.
+expr modifier [exit, opinion, public, recent, latest, national, presidential, straw, online, statewide]
+expr action [go, goes, going, went, gone, head, heads, heading, headed, rush, rushes, rushing, rushed]
+expr timing [open, opens, opening, opened, close, closes, closing, closed]
+expr position [ahead, leading, trailing, behind, surge, surges, surging, surged, drop, drops, dropping, dropped, rise, rises, rising, rose]
+expr main [<(@modifier poles), poles>, <(@action to the poles), poles>, <(@timing the poles), poles>, <([at, near, outside] the poles), poles>, <(@position in the poles), poles>]
+
+let message "Did you mean `polls`? `Polls` refers to voting or surveys; `poles` refers to rods or magnetic poles."
+let description "Looks for mixing up the plural noun `polls` with `poles`."
+let kind "WordChoice"
+let becomes "polls"
+
+test "The latest opinion poles show a neck-and-neck race." "The latest opinion polls show a neck-and-neck race."
+test "Exit poles will be released once voting ends." "Exit polls will be released once voting ends."
+test "Voters head to the poles tomorrow morning." "Voters head to the polls tomorrow morning."
+test "Millions went to the poles on Tuesday." "Millions went to the polls on Tuesday."
+test "The state will close the poles at eight." "The state will close the polls at eight."
+test "Many people were waiting at the poles." "Many people were waiting at the polls."
+test "The candidate is currently ahead in the poles." "The candidate is currently ahead in the polls."
+test "Her numbers have dropped in the poles." "Her numbers have dropped in the polls."
+
+allows "Utility poles lined both sides of the highway."
+allows "He bought a new pair of ski poles."
+allows "The compass needles point to the magnetic poles."
+allows "Opposite poles attract each other."
